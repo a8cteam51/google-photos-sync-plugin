@@ -45,7 +45,7 @@ Creating credentials
 
 ### Then install the plugin on your site
 
-1. Download the latest release from https://github.com/a8cteam51/google-photos-sync/releases.
+1. Download the latest release from https://github.com/a8cteam51/google-photos-sync-plugin/releases.
 1. Upload and activate the plugin through the `Plugins` menu in WordPress.
 2. Once activated, you'll need to configure the App settings which consist of a Client ID and Client Secret obtained from Google when creating a new app. The settings screen for this lives on /wp-admin/admin.php?page=google-photos-sync-settings.
 4. Authenticate with Google to grab the credentials (access and refresh token) so you can use them to send requests on your behalf. The settings screen for this is on /wp-admin/admin.php?page=google-photos-sync-authenticate.
