@@ -1,0 +1,29 @@
+.wp-block-google-photos-sync-album {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1.2rem;
+
+	@for $i from 1 through 6 {
+		&.google-photos-sync-columns-#{$i} {
+
+			@media (min-width: 600px) {
+
+				.google-photos-sync-gallery-img {
+					width: calc(100% / #{$i} - 1.2rem);
+				}
+			}
+		}
+	}
+
+	figure.google-photos-sync-gallery-img {
+		margin: 0;
+		box-sizing: border-box;
+		display: flex;
+		flex-direction: column;
+		flex-grow: 1;
+		justify-content: center;
+		max-width: 100%;
+		position: relative;
+		width: calc(50% - 1.2rem / 2);
+	}
+}

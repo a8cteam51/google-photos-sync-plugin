@@ -1,0 +1,176 @@
+# Copyright (C) 2025 WordPress.com Special Projects
+# This file is distributed under the GPL v3 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Google Photos Sync 2.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/google-photos-sync-plugin\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-05-22T19:32:39+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.11.0\n"
+"X-Domain: google-photos-sync-plugin\n"
+
+#. Plugin Name of the plugin
+#: google-photos-sync-plugin.php
+#: src/Admin/Album.php:68
+#: src/Admin/Authenticate.php:75
+#: src/Admin/CreateAlbum.php:134
+#: src/Admin/Menu.php:44
+#: src/Admin/Menu.php:45
+msgid "Google Photos Sync"
+msgstr ""
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+#: google-photos-sync-plugin.php
+msgid "https://wpspecialprojects.wordpress.com"
+msgstr ""
+
+#. Description of the plugin
+#: google-photos-sync-plugin.php
+msgid "Sync your Google Photos with your WordPress site"
+msgstr ""
+
+#. Author of the plugin
+#: google-photos-sync-plugin.php
+msgid "WordPress.com Special Projects"
+msgstr ""
+
+#: blocks/build/photos-sync-album/render.php:28
+#: blocks/src/photos-sync-album/render.php:28
+msgid "Please create an album first."
+msgstr ""
+
+#: blocks/build/photos-sync-album/render.php:31
+#: blocks/src/photos-sync-album/render.php:31
+#: src/Admin/Album.php:99
+msgid "Create Album"
+msgstr ""
+
+#: blocks/build/photos-sync-album/render.php:34
+#: blocks/src/photos-sync-album/render.php:34
+msgid "The selected album is empty."
+msgstr ""
+
+#: google-photos-sync-plugin.php:57
+msgid "It seems like <strong>google-photos-sync</strong> is corrupted. Please reinstall!"
+msgstr ""
+
+#: src/Admin/Album.php:48
+msgid "Google Photos Album"
+msgstr ""
+
+#. translators: %s: URL to the settings page
+#: src/Admin/Album.php:67
+#: src/Admin/Authenticate.php:74
+#: src/Admin/CreateAlbum.php:133
+msgid "Please configure the %s settings first."
+msgstr ""
+
+#. translators: %s: URL to the authentication page
+#: src/Admin/Album.php:78
+#: src/Admin/CreateAlbum.php:145
+msgid "Please %s with Google first."
+msgstr ""
+
+#: src/Admin/Album.php:79
+#: src/Admin/CreateAlbum.php:146
+msgid "authenticate"
+msgstr ""
+
+#: src/Admin/Album.php:99
+msgid "No album found. Please create a new one. "
+msgstr ""
+
+#: src/Admin/Album.php:106
+msgid "Album Name"
+msgstr ""
+
+#: src/Admin/Album.php:110
+msgid "Google Photos URL"
+msgstr ""
+
+#: src/Admin/Album.php:111
+msgid "View in Google Photos"
+msgstr ""
+
+#: src/Admin/Album.php:115
+msgid "Error retrieving album information."
+msgstr ""
+
+#: src/Admin/ApiSettings.php:49
+msgid "Client ID and Client Secret"
+msgstr ""
+
+#: src/Admin/ApiSettings.php:56
+msgid "Client ID"
+msgstr ""
+
+#: src/Admin/ApiSettings.php:67
+msgid "Client Secret"
+msgstr ""
+
+#: src/Admin/ApiSettings.php:86
+msgid "Please enter your Google Photos API credentials."
+msgstr ""
+
+#: src/Admin/Authenticate.php:53
+msgid "Authenticate with Google"
+msgstr ""
+
+#: src/Admin/Authenticate.php:120
+msgid "Successfully authenticated with Google Photos API."
+msgstr ""
+
+#: src/Admin/Authenticate.php:122
+msgid "Click the button below to authenticate with Google Photos API."
+msgstr ""
+
+#: src/Admin/Authenticate.php:123
+msgid "Connect My Google Account"
+msgstr ""
+
+#: src/Admin/CreateAlbum.php:56
+#: src/Admin/Menu.php:103
+#: src/Admin/Menu.php:104
+msgid "Create album"
+msgstr ""
+
+#: src/Admin/CreateAlbum.php:68
+msgid "Select Album to Create"
+msgstr ""
+
+#: src/Admin/CreateAlbum.php:87
+msgid "Error creating album. Please try again."
+msgstr ""
+
+#: src/Admin/CreateAlbum.php:113
+msgid "Album created successfully."
+msgstr ""
+
+#: src/Admin/CreateAlbum.php:117
+msgid "Create"
+msgstr ""
+
+#: src/Admin/CreateAlbum.php:153
+msgid "Please create an album to upload images to."
+msgstr ""
+
+#: src/Admin/Menu.php:65
+#: src/Admin/Menu.php:66
+msgid "API settings"
+msgstr ""
+
+#: src/Admin/Menu.php:84
+#: src/Admin/Menu.php:85
+msgid "Authorize app"
+msgstr ""
+
+#: src/RestApi.php:92
+#: src/RestApi.php:93
+msgid "No upload tokens found."
+msgstr ""

@@ -1,10 +1,10 @@
-<?php declare( strict_types=1 );
-
-use A8C\SpecialProjects\google-photos-sync-plugin\Plugin;
+<?php declare( strict_types = 1 );
 
 defined( 'ABSPATH' ) || exit;
 
-// region META
+use WPCOMSpecialProjects\GooglePhotosSync\Plugin;
+
+// region
 
 /**
  * Returns the plugin's main class instance.
@@ -14,23 +14,27 @@ defined( 'ABSPATH' ) || exit;
  *
  * @return  Plugin
  */
-function google_photos_sync_plugin_get_plugin_instance(): Plugin {
+function google_photos_sync_get_plugin_instance(): Plugin {
 	return Plugin::get_instance();
+}
+
+/**
+ * Returns the plugin's slug.
+ *
+ * @since   1.0.0
+ * @version 1.0.0
+ *
+ * @return  string
+ */
+function google_photos_sync_get_plugin_slug(): string {
+	return sanitize_key( GOOGLE_PHOTOS_SYNC_METADATA['TextDomain'] );
 }
 
 // endregion
 
-// region OTHERS
+//region OTHERS
 
-$google_photos_sync_plugin_files = glob( constant( 'GOOGLE_PHOTOS_SYNC_PLUGIN_DIR_PATH' ) . 'includes/*.php' );
-if ( false !== $google_photos_sync_plugin_files ) {
-	foreach ( $google_photos_sync_plugin_files as $google_photos_sync_plugin_file ) {
-		if ( 1 === preg_match( '#/includes/_#i', $google_photos_sync_plugin_file ) ) {
-			continue; // Ignore files prefixed with an underscore.
-		}
-
-		require_once $google_photos_sync_plugin_file;
-	}
-}
+require GOOGLE_PHOTOS_SYNC_PATH . 'includes/assets.php';
+require GOOGLE_PHOTOS_SYNC_PATH . 'includes/settings.php';
 
 // endregion

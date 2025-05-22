@@ -1,6 +1,6 @@
-<?php declare( strict_types=1 );
+<?php declare( strict_types = 1 );
 
-namespace A8C\SpecialProjects\google-photos-sync-plugin;
+namespace WPCOMSpecialProjects\GooglePhotosSync;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -39,7 +39,7 @@ final class Blocks {
 	 * @return  void
 	 */
 	public function register_blocks(): void {
-		\register_block_type( \constant( 'GOOGLE_PHOTOS_SYNC_PLUGIN_DIR_PATH' ) . 'blocks/build/foobar' );
+		\register_block_type( GOOGLE_PHOTOS_SYNC_PATH . 'blocks/build/photos-sync-album' );
 	}
 
 	/**
@@ -51,25 +51,15 @@ final class Blocks {
 	 * @return  void
 	 */
 	public function enqueue_block_editor_assets(): void {
-		$asset_meta = google_photos_sync_plugin_get_asset_meta( 'assets/js/build/editor.js' );
-		if ( \is_null( $asset_meta ) ) {
-			return;
-		}
+		$plugin_slug = google_photos_sync_get_plugin_slug();
 
-		$plugin_slug = google_photos_sync_plugin_get_plugin_slug();
+		$asset_meta = google_photos_sync_get_asset_meta( GOOGLE_PHOTOS_SYNC_PATH . 'assets/js/build/editor.js' );
 		\wp_register_script(
 			"$plugin_slug-editor",
-			\constant( 'GOOGLE_PHOTOS_SYNC_PLUGIN_DIR_URL' ) . 'assets/js/build/editor.js',
+			GOOGLE_PHOTOS_SYNC_URL . 'assets/js/build/editor.js',
 			$asset_meta['dependencies'],
 			$asset_meta['version'],
 			false
-		);
-		\wp_localize_script(
-			"$plugin_slug-editor",
-			'team51_donations',
-			array(
-				'ajax_url' => \admin_url( 'admin-ajax.php' ),
-			)
 		);
 	}
 
